@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".WriteActivity">
+
+    <TextView
+        android:id="@+id/titleTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/txtTitle"
+        android:textSize="34sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/verseReferenceTextView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/txtTitleVerse"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/titleTextView" />
+
+    <LinearLayout
+        android:id="@+id/topButtonContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:background="?android:attr/windowBackground"
+        android:elevation="4dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/verseReferenceTextView2"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <ImageButton
+            android:id="@+id/viewChapterButton"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_margin="8dp"
+            android:contentDescription="@string/btnViewChapter"
+            android:scaleType="centerCrop"
+            app:srcCompat="@drawable/img_view_chapter" />
+
+        <ImageButton
+            android:id="@+id/viewVerseButton"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_margin="8dp"
+            android:contentDescription="@string/btnViewVerse"
+            android:scaleType="centerCrop"
+            app:srcCompat="@drawable/img_view_verse" />
+
+        <ImageButton
+            android:id="@+id/goToHomeButton"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_margin="8dp"
+            android:contentDescription="@string/btnGoHome"
+            android:scaleType="centerCrop"
+            app:srcCompat="@drawable/img_home" />
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/noteTitleEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:hint="Enter Title"
+        android:textSize="20sp"
+        android:padding="8dp"
+        android:background="@android:color/transparent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/topButtonContainer" />
+
+    <ScrollView
+        android:id="@+id/noteScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="8dp"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toTopOf="@id/bottomButtonContainer"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/noteTitleEditText"> <!-- Ensures proper scrolling -->
+
+        <EditText
+            android:id="@+id/noteEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:gravity="top"
+            android:hint="@string/hint_enter_note"
+            android:inputType="textMultiLine"
+            android:maxLines="15"
+            android:minLines="10"
+            android:padding="16dp"
+            android:textSize="18sp" />
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/bottomButtonContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?android:attr/windowBackground"
+        android:elevation="4dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <ImageButton
+            android:id="@+id/saveNoteButton"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_margin="8dp"
+            android:contentDescription="@string/btnSave"
+            android:scaleType="centerCrop"
+            app:srcCompat="@drawable/img_save_note" />
+
+        <ImageButton
+            android:id="@+id/viewNotesButton"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_margin="8dp"
+            android:contentDescription="@string/btnViewNotes"
+            android:scaleType="centerCrop"
+            app:srcCompat="@drawable/img_view_notes" />
+
+        <ImageButton
+            android:id="@+id/deleteNoteButton"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_margin="8dp"
+            android:contentDescription="@string/btnDelete"
+            android:scaleType="centerCrop"
+            app:srcCompat="@drawable/img_delete_note" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
