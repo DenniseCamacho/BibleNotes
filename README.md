@@ -1,4 +1,4 @@
-﻿# MobileAppProject
+﻿# BibleNotes
 A simple Android app for taking, saving, editing, and deleting notes based on Bible verses. Built with Kotlin and Room Database the app allows users to organize their study notes efficiently. Features include a daily verse display, full chapter view, and a note management system.
 <br><br>
 <img src="https://github.com/user-attachments/assets/c42f733e-d42c-4b7c-9b56-d03c383325a1" width="200" height="auto" alt="Main Activity">
